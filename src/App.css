@@ -1,38 +1,49 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+:root {
+  --light:#FFF9FB;
+  --gray:#D3D4D9;
+  --dark:#252627;
+  --hilight-red:#BB0A21;
+  --hilight-blue:#4B88A2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: var(--light);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.MainFlex {
+  padding-top: 2vh;
+  margin-left:25%;
+  margin-right:25%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color:var(--light);
 }
 
-.App-link {
-  color: #61dafb;
+#TopNavBar{
+  display:flex;
+  flex-direction: row;
+  height: 10vh;
+  position:relative;
+  background-color:var(--gray);
+  transition-duration: 300ms;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.TopNavBarButton{
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  font-family: 'Roboto', sans-serif;
+  font-size: larger;
+  width:25%;
+  background-color: var(--gray);
+  border:none;
+  height:10vh;
+  cursor:pointer;
+}
+
+.link{
+  color:var(--dark)
 }

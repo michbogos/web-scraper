@@ -3,48 +3,128 @@
 
 :root {
   --light:#FFF9FB;
-  --gray:#D3D4D9;
   --dark:#252627;
   --hilight-red:#BB0A21;
   --hilight-blue:#4B88A2;
-}
-
-body{
-  background-color: var(--light);
+  overflow-x: hidden;
 }
 
 .MainFlex {
   padding-top: 2vh;
-  margin-left:25%;
-  margin-right:25%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color:var(--light);
+  align-content: center;
+  padding-bottom: 0;
 }
 
 #TopNavBar{
   display:flex;
   flex-direction: row;
+  justify-content: space-between;
   height: 10vh;
   position:relative;
-  background-color:var(--gray);
   transition-duration: 300ms;
 }
 
+#editor{
+  display:flex;
+  flex-direction: column;
+  width:50vw;
+}
 .TopNavBarButton{
+  background-color: #ffffff;
   text-decoration: underline;
   text-decoration-thickness: 2px;
   font-family: 'Roboto', sans-serif;
   font-size: larger;
   width:25%;
-  background-color: var(--gray);
   border:none;
-  height:10vh;
+  height:15vh;
   cursor:pointer;
 }
 
 .link{
   color:var(--dark)
   
+}
+
+.flex{
+  display: flex;
+  flex-direction: column;
+  align-content: left;
+  width:30%;
+  padding-left: 5vw;
+  justify-content: space-around;
+}
+
+.footer{
+  width:100%;
+  height:20vh;
+  background-color: #6C63FF;
+  align-items: center;
+}
+
+.rounded{
+  position:relative;
+  top:5vh;
+  right:-40vw;
+  background-color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: larger;
+  border: none;
+  width:20vw;
+  height:10vh;
+  border-radius: 5vh;
+  cursor:pointer;
+}
+
+.ToolBar{
+  height:5vh;
+  width:50vw;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+h1, h2, h3{
+  font-family: 'Roboto', sans-serif;
+  font-size: 10vh;
+  text-align: center;
+  padding-bottom: 5vh;
+}
+
+label{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: larger;
+  text-align: center;
+}
+
+p{
+  padding-bottom: 10vh;
+}
+
+button{
+  background-color:#ffffff;
+  border:none;
+  cursor:pointer;
+}
+
+input{
+  margin:5vh;
+  height:10vh;
+  border-radius: 5vh;
+  border-color:#252627;
+  border-width: 1px;
+  font-weight: 200;
+  font-size:xx-large;
+  text-align: center;
+
+}
+
+iframe{
+  width:75%;
+  margin-left: 12.5%;
+  height:60vh;
 }

@@ -8,20 +8,23 @@ export default function SingleScrape() {
 
     useEffect(() => {
         document.getElementById("urlInput").addEventListener("change", (e)=>{
-            console.log(e.target.value);
-            request.open("GET", e.target.value)
-            request.send();
-            request.onload = () => {
-                setData(request.response)
-                console.log("done")
-            }
-        })
+            fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(e.target.value)}`)
+                .then(response => {
+                    if (response.ok){
+                        return response.json()
+                    }
+                }).then(
+                    (data) => {console.log(data);
+                                document.getElementById("iframe")
+                                .setAttribute("srcDoc", data.contents)}
+                )
     })
+})
     return (
         <div className = "MainFlex">
             <input id = "urlInput" placeholder = "https://example.com"></input>
             <label style = {{fontSize:"xx-large"}}>Window View</label>
-            <p>{data}</p>
+            <iframe srcDoc = "" id = "iframe"></iframe>
         </div>
     )
-}
+    }

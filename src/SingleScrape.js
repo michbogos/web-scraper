@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
+import html2canvas from 'html2canvas';
 
 export default function SingleScrape() {
     const [url, setUrl] = useState("");
@@ -15,6 +16,7 @@ export default function SingleScrape() {
                     }
                 }).then(
                     (data) => {console.log(data);
+                                setData(data.contents)
                                 document.getElementById("iframe")
                                 .setAttribute("srcDoc", data.contents)}
                 )
@@ -25,6 +27,15 @@ export default function SingleScrape() {
             <input id = "urlInput" placeholder = "https://example.com"></input>
             <label style = {{fontSize:"xx-large"}}>Window View</label>
             <iframe srcDoc = "" id = "iframe"></iframe>
+            <button className = "rounded" onClick = {
+                
+
+            html2canvas(document.querySelector("#capture")).then(canvas => {
+            document.body.appendChild(canvas)
+            })
+
+
+            }>Make screenshot</button>
         </div>
     )
     }

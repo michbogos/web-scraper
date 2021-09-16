@@ -78,6 +78,10 @@
   cursor:pointer;
 }
 
+.rounded:hover{
+  background-color: #eeeeee;
+}
+
 .ToolBar{
   height:5vh;
   width:50vw;

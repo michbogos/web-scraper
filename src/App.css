@@ -68,7 +68,7 @@
   position:relative;
   top:5vh;
   right:-40vw;
-  background-color: #ffffff;
+  background-color: #eeeeee;
   font-family: 'Roboto', sans-serif;
   font-size: larger;
   border: none;
@@ -79,7 +79,7 @@
 }
 
 .rounded:hover{
-  background-color: #eeeeee;
+  background-color: #dddddd;
 }
 
 .ToolBar{
@@ -89,6 +89,10 @@
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.Tippy{
+  background-color: #eeeeee;
 }
 
 h1, h2, h3{
@@ -131,4 +135,26 @@ iframe{
   width:90%;
   margin-left: 5%;
   height:100vh;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 20vw;
+}
+
+input[type='checkbox']{
+  display: inline;
+  width:auto;
+  height:5vh;
+  padding-left:5vw;
+  margin:2vmax;
+}
+
+input[type='submit']{
+  width:20vmax;
+  left:0;
+  top:0;
+  background-color: #eeeeee;
 }

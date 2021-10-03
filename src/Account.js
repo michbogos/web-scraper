@@ -7,7 +7,7 @@ export default function Account(props) {
     return (
         <div>
             <TopNavBar></TopNavBar>
-            {props.IsLoggedIn ? <LoggedIn></LoggedIn> : <NotLoggedIn SetIsLoggedIn = {props.SetIsLoggedIn}></NotLoggedIn>}
+            {props.isLoggedIn ? <LoggedIn query = {props.query} auth = {props.auth} user = {props.isLoggedIn}></LoggedIn> : <NotLoggedIn logIn = {props.logIn} setIsLoggedIn = {props.setIsLoggedIn} IsLoggedIn = {props.isLoggedIn}></NotLoggedIn>}
         </div>
     )
 }

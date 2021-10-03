@@ -19,8 +19,6 @@ export default function SingleScrape() {
     return (
         <div className = "MainFlex">
             <input id = "urlInput" placeholder = "https://example.com"></input>
-            <label style = {{fontSize:"xx-large"}}>Window View</label>
-            <iframe srcDoc = "" id = "iframe"></iframe>
             <ScrapeOptions url = {url}></ScrapeOptions>
         </div>
     )
